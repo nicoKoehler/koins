@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+
+{% block links %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+   
+    <link rel="stylesheet" href="../static/css/upload.css">
+    <link rel="stylesheet" href="../static/css/results.css">
+    <script type="text/javascript" src="{{url_for('static',filename='results.js')}}"></script>
+
+{% endblock %}
+
+
+{% block main %}
+<main class="upload-main">
+        <div class="res-wrap" id="res-form-wrap">
+            <p class="sec-head">Your Receipt Scan Results</p>
+            <form action="/export" method="post" id="form-exp">
+                <div class="res-wrap" id="res-tbl-wrap">
+                    <table class="table table-striped-dark table-receipt" id="receipt-return">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Price in CURRENCY</th>
+                                <th>Category</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for price in results.items() %}
+                                <tr>
+                                    
+                                    <td ><input type="text" name="result_product[]" value="{{ price[1]['product'] }}"></td>
+                                    {% set priceFloat =  price[1]["price"] / 100 %}
+                                    <td><input type="text" name="result_price[]" value="{{ '%0.2f' | format(priceFloat|float)}}"></td>
+                                    <td>
+                                        <select name="result_cat[]" id="select_cat">
+                                            <option selected=true value="Uncategorized">Uncategorized</option>
+                                            <option value="-1">-1: Ignore</option>
+                                                {% for i, cat in category.items() %}
+                                                    <option value="{{cat}}"><a class="cat-link" data-a-cat="{{price[0]}}" href="#" name="cat1_{{i}}" id="cat1_{{i}}">{{i}}: {{cat}}</a></option>
+                                                {% endfor %}
+                                                
+                                        </select>
+                                        
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="res-wrap" id="res-btn-wrap">
+                    <div id="center-form-btn">
+                            <button class="form-button" id="create-export-btn" action="submit" type="submit" form="form-exp">Export to CSV</button>
+                    </div>
+                    <div id="center-form-btn">
+                        <a href="/">
+                            <form id="form2">
+                                <button class="form-button" id="create-export-btn" action="#" type="#" form="form2">Upload new receipt</button>
+                            </form>
+                        </a>
+                    </div>
+                </div>
+            </form>    
+    </div>
+
+</main>
+{% endblock %}

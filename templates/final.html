@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+
+{% block links %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+   
+    <link rel="stylesheet" href="../static/css/upload.css">
+    <link rel="stylesheet" href="../static/css/final.css">
+    <script type="text/javascript" src="{{url_for('static',filename='results.js')}}"></script>
+
+{% endblock %}
+
+
+{% block main %}
+<main class="upload-main">
+    <div class="main-center" id="upload-wrapper">
+        <p class="sec-head">Thank you for using my service</p>
+
+        <p class="input-desc" id="submit-button">
+            <div id="center-form-btn">
+                <form action="/">
+                    <button class="form-button" id="form-submit-btn" action="submit" type="submit">Upload New Receipt</button>
+                </form>
+            </div>
+        </p>
+    </div>
+</main>
+{% endblock %}

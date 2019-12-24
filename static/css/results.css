@@ -1,0 +1,92 @@
+
+
+#center-form-btn{
+    padding: 10px; 
+    width: 30vw; 
+    height: auto;
+    margin: auto;
+}
+
+#create-export-btn{
+    height: 5vh;
+    font-size: 3vh;
+    font-weight: 300;
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+}
+
+.table{
+    background-color: #d4d4d4;
+}
+
+th, td{
+    width: 30%; 
+    overflow: hidden;
+}
+th {
+    text-align: center;
+    background-color: #d4d4d4;
+    color: grey;
+    font-size: 2vh;
+    font-weight: 300; 
+}
+tr:hover{
+    background-color: #6dcc00;
+}
+
+input{
+    width: 100%; 
+    border-radius: 5px;
+    padding-left: 1vw;
+}
+
+select{
+    border-radius: 5px;
+    width: 100%; 
+    padding-left: 1vw;
+}
+
+#res-form-wrap{
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+
+    height: 83%; 
+    width: 90%; 
+    padding: 1% 5%;
+    box-sizing: border-box;
+
+    background: rgba(212, 212, 212, 0.5); 
+
+    border-radius: 5px;  
+}
+
+#res-tbl-wrap{
+    height: 60vh;
+    overflow: scroll;
+
+}
+
+.sec-head{
+    color: white;
+    font-size: 4vh;
+    font-weight: 300;
+    text-align: center;
+    border-bottom: solid white 0.7px;
+    margin-bottom: 3vh;
+}
+
+#res-btn-wrap{
+    margin-top: 2vh;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}

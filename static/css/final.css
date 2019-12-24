@@ -1,0 +1,17 @@
+
+
+.main-center{
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+
+    height: 20vh; 
+    width: 50vw; 
+    padding: 1% 5%;
+    box-sizing: border-box;
+
+    background: rgba(0, 0, 0, 0.5); 
+
+    border-radius: 15px;  
+}

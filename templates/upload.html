@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+
+{% block links %}
+        <link rel="stylesheet" href="../static/css/upload.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+{% endblock %}
+
+
+{% block main %}
+<main class="upload-main">
+
+        <div class="main-center" id="upload-wrapper">
+                
+                <p class="sec-head">Upload Your Receipt</p>
+                
+                <form enctype=multipart/form-data class="form-custom" id="upload-form" action="/upload" method="post">
+
+                        <p class="input-desc" id="comment-desc">
+
+                                <input type="text" name="vendor" class="form-input" id="comment-input" placeholder="Enter the Vendor for this upload">
+                        </p>
+
+                        <p class="input-desc" id="comment-desc">
+                                <input type="file" name="file" class="form-input" id="file-input">
+                        </p>
+
+                        <p class="input-desc" id="submit-button">
+                                <div id="center-form-btn">
+                                        <button class="form-button" id="form-submit-btn" action="submit" type="submit">Submit</button>
+                                </div>
+                        </p>
+                        
+                </form>
+        </div>
+
+
+
+</main>
+
+
+{% endblock %}
