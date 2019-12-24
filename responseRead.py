@@ -161,8 +161,8 @@ def udf_printSectionItems(p_dict):
 
 def udf_readJSONdir():
 
-    jsDir = "../media/testFiles/output/json"
-    txtDir = "../media/testFiles/output/txt"
+    jsDir = "media/testFiles/output/json"
+    txtDir = "media/testFiles/output/txt"
 
     for fj in os.listdir(jsDir):
 
