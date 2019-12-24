@@ -8,7 +8,7 @@ import json as js
 
 
 sAPIkey ="28270d246888957"
-jsDir = "media/testFiles/output/json"
+jsDir = "uploads"
 
 app = Flask(__name__)
 
