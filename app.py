@@ -18,7 +18,7 @@ app.config["MAX_CONTENT_LENGTH"] = 4 * 1024 * 1024
 UPLOAD_FOLDER = "/mnt/3B6FE0A06EB4F24F/mega_sync/06 Persoenliches/06 Projects/00 learningCode/harvardX_CS50/week10_finalProject/projectFolder/uploads"
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
-CONTEXT = "test"
+CONTEXT = "live"
 
 with open(os.path.join("../projectFolder/static/storage/category_1.json"),"r") as j:
     jCat1 = js.load(j)
