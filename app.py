@@ -15,12 +15,12 @@ app = Flask(__name__)
 # File upload setup > only accept uploads of 4 MB
 app.config["MAX_CONTENT_LENGTH"] = 4 * 1024 * 1024
 
-UPLOAD_FOLDER = "../uploads"
+UPLOAD_FOLDER = "uploads"
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
 CONTEXT = "live"
 
-with open(os.path.join("../static/storage/category_1.json"),"r") as j:
+with open(os.path.join("static/storage/category_1.json"),"r") as j:
     jCat1 = js.load(j)
 
 
