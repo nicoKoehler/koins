@@ -1,7 +1,7 @@
 import requests
 
 def allowedExtensions(p_fileName):
-    ALLOWED_EXTENSIONS = {'pdf', 'jpg', 'jpeg', 'png'}
+    ALLOWED_EXTENSIONS = {'jpg', 'jpeg', 'png'}
 
     if "." not in p_fileName:
         return False
@@ -30,5 +30,4 @@ def OCRpost(p_file, p_fileName, p_key, p_lang, p_fileType):
 
     #with open(p_filePath, "rb") as f:
     ocr = requests.post("https://api.ocr.space/parse/image", files={p_fileName: p_file}, data=payload)           
-    print(ocr.json())
     return ocr.json()

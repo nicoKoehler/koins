@@ -31,7 +31,7 @@
     left: 50%; 
     transform: translate(-50%, -50%);
 
-    height: 40vh; 
+    height: 60vh; 
     width: 30vw; 
     padding: 1% 5%;
     box-sizing: border-box;
@@ -105,4 +105,42 @@
     text-align: center;
     border-bottom: solid white 0.7px;
     margin-bottom: 3vh;
+}
+
+.in-note{
+    font-size: 1.2vh;
+    color: white;
+    width: 100%;
+    text-align: center;
+    margin-top: -1vh;
+}
+
+#lbl-tcs{
+    color: white;
+}
+
+#lbl-tcs a{
+    color: #6dcc00
+}
+
+#slt-lang{
+    width: 100%;
+    border-radius: 5px;
+    border: solid #6dcc00 1px;
+}
+
+#file-input{
+    border: solid #6dcc00 1px;
+    border-radius: 5px;
+}
+
+#flash{
+    position: absolute;
+    top: 10%; 
+    left: 50%; 
+    transform: translate(-50%, -10%);
+
+    height: 5vh; 
+    width: 80vw; 
+    text-align: center;
 }

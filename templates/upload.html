@@ -9,6 +9,18 @@
 
 {% block main %}
 <main class="upload-main">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                        {% for category, message in messages %}
+                        <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert" id="flash">
+                                <span>{{ message }}</span>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                        </div>
+                        {% endfor %}
+                {% endif %}
+        {% endwith %}
 
         <div class="main-center" id="upload-wrapper">
                 
@@ -17,13 +29,27 @@
                 <form enctype=multipart/form-data class="form-custom" id="upload-form" action="/upload" method="post">
 
                         <p class="input-desc" id="comment-desc">
-
                                 <input type="text" name="vendor" class="form-input" id="comment-input" placeholder="Enter the Vendor for this upload">
                         </p>
 
                         <p class="input-desc" id="comment-desc">
-                                <input type="file" name="file" class="form-input" id="file-input">
+                                <select name="lang" id="slt-lang" class="form-input" required>
+                                        <option value="def" selected=true disabled>Choose your language</option value="def" selected="true">
+                                        <option value="ger"> German </option>
+                                        <option value="eng"> English </option>
+                                </select>
                         </p>
+
+                        <p class="input-desc" id="comment-desc">
+                                <input type="file" name="file" class="form-input" id="file-input" accept=".jpg" required > 
+                                <p class="in-note">(Only Imagees of type .jpg can be processed under this engine)</p>
+                        </p>
+
+                        <p class="input-desc" id="tcs">
+                                <div id="center-form-btn">
+                                        <input type="checkbox" id="tcs" name="tcs" required> 
+                                        <label id="lbl-tcs" for="tcs">Please accept our <a href="/terms">Terms & Conditions, Privacy</a></label>
+                                </div>
 
                         <p class="input-desc" id="submit-button">
                                 <div id="center-form-btn">

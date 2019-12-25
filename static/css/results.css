@@ -52,6 +52,7 @@ select{
     border-radius: 5px;
     width: 100%; 
     padding-left: 1vw;
+    background-color: white;
 }
 
 #res-form-wrap{
@@ -72,7 +73,7 @@ select{
 
 #res-tbl-wrap{
     height: 60vh;
-    overflow: scroll;
+    overflow: auto;
 
 }
 
