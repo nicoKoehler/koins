@@ -3,6 +3,9 @@
 ## Summary
 _Koins.me_ is a web-app that allows for Upload of pictures of shopping receipts, reads it out via an OCR API, and allows the user to modify the results and ultimately download them. 
 
+### Link to App
+https://koins-me.herokuapp.com/
+
 ### Purpose
 While lots of banks alright provide insights into high level spending categories, these categories may not be broad enough, and, for the case of whole-salers, cannot be accurate. Therefore _Koins.me_ provides the possibility to read out and analyze more detailed information about one's own purchasing habits information. 
 
