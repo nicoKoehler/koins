@@ -7,7 +7,7 @@ from werkzeug.utils import secure_filename
 import json as js
 
 
-sAPIkey ="28270d246888957"
+sAPIkey ="API KEY"
 jsDir = "uploads"
 
 app = Flask(__name__)
